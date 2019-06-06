@@ -1,0 +1,31 @@
+{
+  "name": "react_full_stack",
+  "version": "1.0.0",
+  "description": "a media react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RanjanBa/react_full_stack.git"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Ranjan Baro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RanjanBa/react_full_stack/issues"
+  },
+  "homepage": "https://github.com/RanjanBa/react_full_stack#readme",
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.4",
+    "express": "^4.17.1",
+    "pg": "^7.11.0"
+  }
+}
