@@ -34,7 +34,7 @@ const Weather = (props) => {
                         </tr>
                         <tr>
                             <td>Max Temp</td>
-                            <td>{Math.floor(data.main.temp_max)}%</td>
+                            <td>{Math.floor(data.main.temp_max)}&deg;F</td>
                         </tr>
                     </tbody>
                 </Table>
