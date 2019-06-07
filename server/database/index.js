@@ -1,6 +1,6 @@
 var { Pool } = require('pg');
 
-const CONNECTION_STRING = process.env.DATABASE_URL || 'postgresql://postgress:postgress@localhost:5432/weather-db';
+const CONNECTION_STRING = process.env.DATABASE_URL || 'postgresql://postgres:postgres@localhost:5432/weather-db';
 const SSL = process.env.NODE_ENV === 'production';
 
 class Database {
@@ -17,8 +17,12 @@ class Database {
     }
 
     query(query, ...args) {
+        console.log(query);
         this._pool.connect((err, client, done) => {
-            if(err) throw err;
+            if(err) {
+                console.error(err.message);
+                return undefined;
+            };
             const params = args.length === 2? args[0] : [];
             const callback = args.length === 1? args[0] : args[1];
 
