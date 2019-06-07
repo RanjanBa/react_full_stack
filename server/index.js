@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use('/api/cities', require('./api/cities'));
 app.use('/api/weather', require('./api/weather'));
 
-if(ENv === 'production') {
+if(ENV === 'production') {
     app.use(express.static(path.join(__dirname, '../react_weather_app/build')));
     app.use((req, res) => {
         res.sendFile(path.join(__dirname, '../react_weather_app/build/index.html'));
